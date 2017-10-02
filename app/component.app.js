@@ -20,11 +20,26 @@ System.register(['@angular/core'], function(exports_1, context_1) {
         execute: function() {
             AppComponent = (function () {
                 function AppComponent() {
+                    this.name = 'Xhou Ta';
+                    this.artists = [
+                        {
+                            name: 'Barot Bellingham',
+                            school: 'Penn State'
+                        },
+                        {
+                            name: 'Jonathan Ferrar',
+                            school: 'University of Illinois'
+                        },
+                        {
+                            name: 'Hillary Post',
+                            school: 'University of Florida'
+                        }
+                    ];
                 }
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'app',
-                        template: '<h1>Artist Directory</h1>'
+                        templateUrl: './partials/app.html'
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
