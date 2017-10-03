@@ -36,10 +36,23 @@ System.register(['@angular/core'], function(exports_1, context_1) {
                         }
                     ];
                 }
+                AppComponent.prototype.onClick = function (myItem, myElement) {
+                    this.name = myItem.name;
+                    myElement.style.backgroundColor = "#FECE4E";
+                };
+                AppComponent.prototype.addArtist = function (value) {
+                    if (value !== '') {
+                        this.artists.push({
+                            name: value,
+                            school: 'Hard Knocks'
+                        });
+                    }
+                };
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'app',
-                        templateUrl: './partials/app.html'
+                        templateUrl: './partials/app.html',
+                        styleUrls: ["./css/app.css"]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
